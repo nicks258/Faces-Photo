@@ -1,3 +1,30 @@
 page-second {
 
+
+
+    .background{
+      background: url("../assets/imgs/02.png") no-repeat center center;
+      background-size: cover;
+      background-position: 100% 100%;
+      background-attachment: fixed;
+    }
+  .name {
+    /* height: 33%; */
+    font-size: 28px;
+    position: fixed;
+    /* width: 55%; */
+    color: #000;
+    margin-left: 190px;
+    margin-top: 324px;
+  }
+  .email {
+    font-size: 28px;
+    position: fixed;
+    /* width: 55%; */
+    color: #000;
+    margin-left: 190px;
+    margin-top: 555px;
+  }
+
+
 }

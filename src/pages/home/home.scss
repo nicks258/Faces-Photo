@@ -1,3 +1,8 @@
 page-home {
-
+  .background{
+    background: url("../assets/imgs/03.png") no-repeat center center;
+    background-size: cover;
+    background-position: 100% 100%;
+    background-attachment: fixed;
+  }
 }

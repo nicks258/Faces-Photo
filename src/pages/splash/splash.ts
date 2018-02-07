@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {SecondPage} from "../second/second";
 
 /**
  * Generated class for the SplashPage page.
@@ -16,6 +17,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class SplashPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    setTimeout(function () {
+      navCtrl.push(SecondPage);
+    })
   }
 
   ionViewDidLoad() {

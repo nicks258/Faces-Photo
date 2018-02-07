@@ -6,23 +6,34 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {SplashPage} from "../pages/splash/splash";
+import {CameraPage} from "../pages/camera/camera";
+import {SecondPage} from "../pages/second/second";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SplashPage,
+    SecondPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{scrollAssist:false,
+      autoFocusAssist:false}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SecondPage,
+    SplashPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
+
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
