@@ -78,7 +78,7 @@ export class CameraPage {
                 // this.native.setItem("backgroundImages", JSON.stringify(this.backgroundImages));
                 console.log(this.base64ImageData);
                 cameraPreview.stopCamera();
-                navCtrl.push(ThanksPage);
+                navCtrl.push(ThanksPage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
                 // navCtrl.push(HomePage);
               }, (err) => {
                 alert(err);
@@ -116,7 +116,7 @@ export class CameraPage {
                 // this.native.setItem("base64_", this.base64ImageData);
                 // this.native.setItem("backgroundImages", JSON.stringify(this.backgroundImages));
                 // console.log(this.base64ImageData);
-                navCtrl.push(HomePage);
+                navCtrl.push(HomePage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
                 cameraPreview.stopCamera();
                 // navCtrl.push(HomePage);
               }, (err) => {

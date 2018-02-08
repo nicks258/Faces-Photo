@@ -16,17 +16,37 @@
   <div class="hide_button">
     <button style="background: transparent ; color:transparent;"  (click)="options()" round>Light Round</button>
   </div>
+  <img src="assets/imgs/logo_light.jpg" style="margin-left: auto;margin-right: auto;display: block;margin-top: 76px;">
+  <ion-grid>
+    <ion-col>
+  <img src="assets/imgs/name.png" style="margin-left: auto;margin-right: auto;display: block;margin-top: 76px;">
+
+
+  <ion-input style="padding-left: 13px;width: 50%;margin-top: 18px;display: block;border-color: #000;margin-left: auto; border-style: solid;font-size: 30px;margin-right: auto;" placeholder="Name" name= "name" [(ngModel)]="name" type="text">
+  </ion-input>
+    </ion-col>
+
+    <ion-col>
+      <img src="assets/imgs/email.png" style="margin-left: auto;margin-right: auto;display: block;margin-top: 300px;">
+
+      <ion-input style="padding-left: 13px;width: 50%;margin-top: 18px;display: block;border-color: #000;margin-left: auto; border-style: solid;font-size: 30px;margin-right: auto;" placeholder="Email" name= "email" [(ngModel)]="email" type="text">
+      </ion-input>
+    </ion-col>
+  </ion-grid>
+  <button style="background: url(assets/imgs/buttons.png);width: 30%;height: 30%;background-repeat: no-repeat;display: block;margin-top: 488px;margin-left: auto;margin-right: auto;" (click)="enter()">
+    <!--<img src="assets/imgs/button text.png" height="45" width="96"/>-->
+  </button>
   <!--<div class="refral">-->
   <!--<button class="enter_draw" (click)="enterADraw()" ion-button>Enter a Refral Draw</button>-->
   <!--<img height="66" src="assets/imgs/flight icon 01.png" style="margin-left: -56%;position: absolute;margin-top: -5px;" width="186">-->
   <!--</div>-->
-  <div class="shot">
-    <ion-input placeholder="Name" class="name" name= "name" [(ngModel)]="name"  type="text">
-    </ion-input>
-    <ion-input placeholder="Email" class="email" name= "email" [(ngModel)]="email"  type="email">
-    </ion-input>
-    <button style="
-    background: transparent;height: 189px;margin-top: 693px;width: 306px;margin-left: 251px;" (click)="enter()"  ion-button>  </button>
-    <!--<img  src="assets/imgs/flight icon.png" height="66" width="230" style="position: absolute; margin-left:1%"/>-->
-  </div>
+  <!--<div class="shot">-->
+    <!--<ion-input placeholder="Name" class="name" name= "name" [(ngModel)]="name"  type="text">-->
+    <!--</ion-input>-->
+    <!--<ion-input placeholder="Email" class="email" name= "email" [(ngModel)]="email"  type="email">-->
+    <!--</ion-input>-->
+    <!--<button style="-->
+    <!--background: transparent;height: 189px;margin-top: 693px;width: 306px;margin-left: 251px;" (click)="enter()"  ion-button>  </button>-->
+    <!--&lt;!&ndash;<img  src="assets/imgs/flight icon.png" height="66" width="230" style="position: absolute; margin-left:1%"/>&ndash;&gt;-->
+  <!--</div>-->
 </ion-content>

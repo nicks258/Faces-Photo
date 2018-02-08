@@ -59,7 +59,7 @@ export class HomePage {
       }
       this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
       setTimeout(function () {
-        navCtrl.push(CameraPage);
+        navCtrl.push(CameraPage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
 
       },5000);
     });

@@ -1,3 +1,10 @@
 page-thanks {
-
+.background_preview{
+  background: url("../assets/imgs/previe_bg.jpg") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  z-index: 1000;
+  background-position: 100% 100%;
+  background-attachment: fixed;
+}
 }

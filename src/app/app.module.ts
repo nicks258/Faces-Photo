@@ -14,6 +14,8 @@ import {ThanksPage} from "../pages/thanks/thanks";
 
 import {CameraPreview} from "@ionic-native/camera-preview";
 import { GlobalProvider } from '../providers/global/global';
+import {PreviewPage} from "../pages/preview/preview";
+import { HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { GlobalProvider } from '../providers/global/global';
     SplashPage,
     SecondPage,
     ThanksPage,
-    CameraPage
+    CameraPage,
+    PreviewPage,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp,{scrollAssist:false,
       autoFocusAssist:false}),
   ],
@@ -35,13 +39,15 @@ import { GlobalProvider } from '../providers/global/global';
     HomePage,
     SecondPage,
     SplashPage,
+    PreviewPage,
     ThanksPage,
-    CameraPage
+    CameraPage,
   ],
   providers: [
     StatusBar,
     NativeStorage,
     CameraPreview,
+    HttpModule,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalProvider
