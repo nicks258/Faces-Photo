@@ -9,6 +9,11 @@ import { HomePage } from '../pages/home/home';
 import {SplashPage} from "../pages/splash/splash";
 import {CameraPage} from "../pages/camera/camera";
 import {SecondPage} from "../pages/second/second";
+import {NativeStorage} from "@ionic-native/native-storage";
+import {ThanksPage} from "../pages/thanks/thanks";
+
+import {CameraPreview} from "@ionic-native/camera-preview";
+import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,7 @@ import {SecondPage} from "../pages/second/second";
     HomePage,
     SplashPage,
     SecondPage,
+    ThanksPage,
     CameraPage
   ],
   imports: [
@@ -29,13 +35,16 @@ import {SecondPage} from "../pages/second/second";
     HomePage,
     SecondPage,
     SplashPage,
+    ThanksPage,
     CameraPage
   ],
   providers: [
     StatusBar,
-
+    NativeStorage,
+    CameraPreview,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalProvider
   ]
 })
 export class AppModule {}

@@ -3,7 +3,7 @@
     <name>Faces</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.2.5:8104" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -81,10 +81,22 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="cordova-plugin-camera-preview" spec="^0.9.0" />
     <plugin name="com-badrit-base64" spec="^0.2.0" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <allow-navigation href="http://169.254.138.10:8101" />
-    <engine name="ios" spec="~4.5.4" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="cordova-plugin-nativestorage" spec="^2.2.2" />
+    <allow-navigation href="http://192.168.2.5:8101" />
+    <allow-navigation href="http://169.254.195.160:8102" />
+    <allow-navigation href="http://169.254.195.160:8101" />
+    <allow-navigation href="http://169.254.25.180:8100" />
+    <allow-navigation href="http://192.168.2.5:8100" />
+    <allow-navigation href="http://169.254.46.100:8101" />
+    <plugin name="cordova-plugin-camera-preview" spec="^0.9.0" />
+    <allow-navigation href="http://169.254.46.100:8102" />
+    <allow-navigation href="http://192.168.2.5:8102" />
+    <allow-navigation href="http://169.254.46.100:8103" />
+    <allow-navigation href="http://192.168.2.5:8103" />
+    <allow-navigation href="http://192.168.2.5:8104" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>

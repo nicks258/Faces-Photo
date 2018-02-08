@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from "../home/home";
+import {NativeStorage} from "@ionic-native/native-storage";
 
 /**
  * Generated class for the SecondPage page.
@@ -21,7 +22,7 @@ export class SecondPage {
   min = 5;
   max = 35;
   backgroundImages=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public native:NativeStorage) {
     this.generateRandomImage();
   }
 
@@ -31,7 +32,11 @@ export class SecondPage {
 
 
   enter(){
-    this.navCtrl.push(HomePage,{backgroundImages:this.backgroundImages});
+    this.native.setItem("name",this.name);
+    this.native.setItem("email",this.email);
+    // this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
+    this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
+    this.navCtrl.push(HomePage);
   }
 
 
