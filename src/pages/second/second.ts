@@ -33,14 +33,19 @@ export class SecondPage {
 
 
   enter(){
-    this.native.setItem("name",this.name).then(value => {
-      console.log("saved->"+value);
-    }),error => console.error('Error storing item', error)
-    this.native.setItem("email",this.email);
-    console.log("name->" + this.name +" -> " + this.email);
-    // this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
-    this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
-    this.navCtrl.push(HomePage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
+    if(this.email.length==0 || this.name.length==0){
+      alert("Enter Name/Email")
+    }
+    else {
+      this.native.setItem("name", this.name).then(value => {
+        console.log("saved->" + value);
+      }), error => console.error('Error storing item', error);
+      this.native.setItem("email", this.email);
+      console.log("name->" + this.name + " -> " + this.email);
+      // this.native.setItem("backgroundImages",JSON.stringify(this.backgroundImages));
+      this.native.setItem("backgroundImages", JSON.stringify(this.backgroundImages));
+      this.navCtrl.push(HomePage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
+    }
   }
 
 

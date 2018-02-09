@@ -38,7 +38,7 @@ export class CameraPage {
   pictureOpts: CameraPreviewPictureOptions = {
     width: 1280,
     height: 1280,
-    quality: 85
+    quality: 55
   };
 
   private picture;

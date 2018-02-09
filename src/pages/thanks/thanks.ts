@@ -70,7 +70,7 @@ export class ThanksPage {
     setTimeout(function () {
 
       navCtrl.push(PreviewPage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
-    },9000)
+    },12000)
 
   }
 
@@ -109,31 +109,32 @@ export class ThanksPage {
         console.log("email->"+email);
         this.native.getItem("location").then(value =>{
           location = value;
+          body.append('location', location);
+          body.append('name',name);
+          body.append('mobile',"NA");
+          body.append('email',email);
+          body.append('photo_base_64_1',this.fileSend0);
+          body.append('photo_base_64_2',this.fileSend1);
+          body.append('photo_base_64_3',this.fileSend2);
+          body.append('photo_base_64_4',this.fileSend3);
+          body.append('clicked_on',new Date().toISOString());
+          body.append('user_id',"faces");
+          body.append('password',"FS#123");
+          let headers = new Headers();
+          let options = { headers: headers };
+          this.http.post('http://52.66.132.37/faces_photobooth/saveclick_rest/', body ).subscribe(data => {
+            console.log(data);
+            let data_to_use = data.json();
+            console.log(data_to_use);
+          },error2 => {
+            // loadingPopup.dismiss();
+
+
+
+            console.log("error->" + error2);
         });
 
-        body.append('location', location);
-        body.append('name',name);
-        body.append('mobile',"NA");
-        body.append('email',email);
-        body.append('photo_base_64_1',this.fileSend0);
-        body.append('photo_base_64_2',this.fileSend1);
-        body.append('photo_base_64_3',this.fileSend2);
-        body.append('photo_base_64_4',this.fileSend3);
-        body.append('clicked_on',new Date().toISOString());
-        body.append('user_id',"faces");
-        body.append('password',"FS#123");
-        let headers = new Headers();
-        let options = { headers: headers };
-        this.http.post('http://52.66.132.37/faces_photobooth/saveclick_rest/', body ).subscribe(data => {
-          console.log(data);
-          let data_to_use = data.json();
-          console.log(data_to_use);
-        },error2 => {
-          // loadingPopup.dismiss();
 
-
-
-          console.log("error->" + error2);
         });
 
 

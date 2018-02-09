@@ -21,13 +21,13 @@ export class HomePage {
   };
   constructor(public navParam:NavParams, public navCtrl: NavController,public native:NativeStorage,public global:GlobalProvider) {
     if(global.myGlobalVar!=undefined) {
-      this.native.getItem("baseStringArray").then(value => {
+      this.native.getItem('baseStringArray').then(value => {
         this.baseStrings = JSON.parse(value);
         this.baseStrings.push(global.myGlobalVar);
-        this.native.setItem("baseStringArray",JSON.stringify(this.baseStrings));
+        this.native.setItem('baseStringArray',JSON.stringify(this.baseStrings));
       },reason =>{
         this.baseStrings.push(global.myGlobalVar);
-        this.native.setItem("baseStringArray",JSON.stringify(this.baseStrings));
+        this.native.setItem('baseStringArray',JSON.stringify(this.baseStrings));
       } );
 
     }
