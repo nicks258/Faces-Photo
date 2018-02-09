@@ -95,9 +95,5 @@
     <plugin name="cordova-plugin-camera-preview" spec="^0.9.0" />
     <allow-navigation href="http://169.254.46.100:8102" />
     <allow-navigation href="http://192.168.2.5:8102" />
-    <allow-navigation href="http://169.254.46.100:8103" />
-    <allow-navigation href="http://192.168.2.5:8103" />
-    <allow-navigation href="http://192.168.2.5:8104" />
-    <allow-navigation href="http://169.254.122.177:8103" />
     <engine name="ios" spec="^4.5.4" />
 </widget>

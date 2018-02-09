@@ -16,6 +16,7 @@ import {CameraPreview} from "@ionic-native/camera-preview";
 import { GlobalProvider } from '../providers/global/global';
 import {PreviewPage} from "../pages/preview/preview";
 import { HttpModule} from "@angular/http";
+import {OptionPage} from "../pages/option/option";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpModule} from "@angular/http";
     SplashPage,
     SecondPage,
     ThanksPage,
+    OptionPage,
     CameraPage,
     PreviewPage,
   ],
@@ -39,6 +41,7 @@ import { HttpModule} from "@angular/http";
     HomePage,
     SecondPage,
     SplashPage,
+    OptionPage,
     PreviewPage,
     ThanksPage,
     CameraPage,

@@ -23,10 +23,10 @@ export class PreviewPage {
     this.native.remove("email");
     this.native.remove("backgroundImages");
     this.native.remove("baseStringArray");
-    this.native.clear();
+    // this.native.clear();
     setTimeout(function () {
       navCtrl.push(SecondPage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
-    },3000)
+    },6000)
 
   }
 

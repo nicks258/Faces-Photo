@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from "../home/home";
 import {NativeStorage} from "@ionic-native/native-storage";
+import {OptionPage} from "../option/option";
 
 /**
  * Generated class for the SecondPage page.
@@ -49,5 +50,8 @@ export class SecondPage {
       this.number = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
       this.backgroundImages.push(this.number);
     }
+  }
+  options(){
+    this.navCtrl.push(OptionPage);
   }
 }

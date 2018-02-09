@@ -70,7 +70,7 @@ export class ThanksPage {
     setTimeout(function () {
 
       navCtrl.push(PreviewPage, {animate: true, animation: 'transition', duration: 300, direction: 'forward'});
-    },50000)
+    },9000)
 
   }
 
@@ -100,15 +100,18 @@ export class ThanksPage {
 
     let name :any;
     let email:any;
+    let location :any;
     this.native.getItem("name").then(value => {
       name = value;
-      console.log("name->"+name)
+      console.log("name->"+name);
       this.native.getItem("email").then(value => {
         email = value;
-        console.log("email->"+email)
+        console.log("email->"+email);
+        this.native.getItem("location").then(value =>{
+          location = value;
+        });
 
-
-        body.append('location', "Jaipur");
+        body.append('location', location);
         body.append('name',name);
         body.append('mobile',"NA");
         body.append('email',email);
